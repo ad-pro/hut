@@ -8,7 +8,7 @@ exec_run 			= hut_example_rebar3
 exec 				= erl -pz ./_build/default/lib/*/ebin $(exec_opts) -run $(exec_run) -run init stop -noshell
 
 $(REBAR):
-	curl -L https://s3.amazonaws.com/rebar3/rebar3 > $@
+	cp ../../rebar3 $@
 	chmod +x $@
 
 .PHONY: run_example_default
